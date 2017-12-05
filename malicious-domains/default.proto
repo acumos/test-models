@@ -1,0 +1,26 @@
+syntax = "proto3";
+option java_package = "com.google.protobuf";
+option java_outer_classname = "DatasetProto";
+
+message DataFrameRow {
+string host = 1;
+enum domain = 2;
+enum class = 3;
+enum subclass = 4;
+int32 length = 5;
+double entropy = 6;
+double p_vowels = 7;
+int32 num_words = 8;
+int32 malicious = 9;
+}
+
+message DataFrame {
+    repeated DataFrameRow rows = 1;
+}
+message Prediction {
+    repeated string prediction= 1;
+}
+
+service Model {
+  rpc transform (DataFrame) returns (Prediction);
+}
