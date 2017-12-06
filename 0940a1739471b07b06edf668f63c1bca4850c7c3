@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e871ab7b_cffc5ba0",
+        "filename": "acoustic_emission/main.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2017-12-06T20:35:11Z",
+      "side": 1,
+      "message": "Please remove comment annotations such as this",
+      "revId": "0940a1739471b07b06edf668f63c1bca4850c7c3",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e06ad80_e6a08307",
+        "filename": "malicious-domains/not_needed for onboarding/README.md~",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2017-12-06T20:35:11Z",
+      "side": 1,
+      "message": "Either remove this file or rename it; the trailing tilde (~) means this was a backup file for Emacs.",
+      "revId": "0940a1739471b07b06edf668f63c1bca4850c7c3",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
