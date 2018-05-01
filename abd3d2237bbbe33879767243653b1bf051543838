@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "a8aa4e7b_c2267e3c",
+        "filename": "SoupToNuts/iris_sklearn.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 8
+      },
+      "writtenOn": "2018-05-01T14:19:00Z",
+      "side": 1,
+      "message": "Yep.",
+      "parentUuid": "d0f53fbc_6ceb4bb6",
+      "revId": "abd3d2237bbbe33879767243653b1bf051543838",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "e78b872a_fb631c73",
         "filename": "SoupToNuts/iris_sklearn.py",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2018-05-01T13:30:06Z",
       "side": 1,
       "message": "Please remove hardcoded path.  Use /tmp",
+      "revId": "abd3d2237bbbe33879767243653b1bf051543838",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f51f0f69_542152e5",
+        "filename": "SoupToNuts/iris_sklearn.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 8
+      },
+      "writtenOn": "2018-05-01T14:19:00Z",
+      "side": 1,
+      "message": "This is example code. Not meant to work everywhere.",
+      "parentUuid": "e78b872a_fb631c73",
       "revId": "abd3d2237bbbe33879767243653b1bf051543838",
       "serverId": "655300a2-7a56-4504-9153-881edd907bea",
       "unresolved": false
@@ -59,6 +95,30 @@
     },
     {
       "key": {
+        "uuid": "ead3917f_f454c727",
+        "filename": "SoupToNuts/iris_tester.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 8
+      },
+      "writtenOn": "2018-05-01T14:19:00Z",
+      "side": 1,
+      "message": "It\u0027s what the protobuf model.proto compiles into. Described in the document from which these code snippets are pulled. I may actually at it to the repo.",
+      "parentUuid": "5bb56fd0_9183c036",
+      "range": {
+        "startLine": 1,
+        "startChar": 10,
+        "endLine": 1,
+        "endChar": 11
+      },
+      "revId": "abd3d2237bbbe33879767243653b1bf051543838",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "c6f4a45e_b29e3e13",
         "filename": "SoupToNuts/iris_tester.py",
         "patchSetId": 1
@@ -76,6 +136,24 @@
     },
     {
       "key": {
+        "uuid": "0e41c469_9dd800d6",
+        "filename": "SoupToNuts/iris_tester.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 8
+      },
+      "writtenOn": "2018-05-01T14:19:00Z",
+      "side": 1,
+      "message": "Yes, very.",
+      "parentUuid": "c6f4a45e_b29e3e13",
+      "revId": "abd3d2237bbbe33879767243653b1bf051543838",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4192598b_55a9d40a",
         "filename": "SoupToNuts/iris_tester.py",
         "patchSetId": 1
@@ -87,6 +165,24 @@
       "writtenOn": "2018-05-01T13:30:06Z",
       "side": 1,
       "message": "Please explain this url, anyone using the sample must change it, right?",
+      "revId": "abd3d2237bbbe33879767243653b1bf051543838",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aa08419_4b18429d",
+        "filename": "SoupToNuts/iris_tester.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 8
+      },
+      "writtenOn": "2018-05-01T14:19:00Z",
+      "side": 1,
+      "message": "Again, example code, explained in the doc. Can you have MS word docs in a gerrit repo, or is that verboten?",
+      "parentUuid": "4192598b_55a9d40a",
       "revId": "abd3d2237bbbe33879767243653b1bf051543838",
       "serverId": "655300a2-7a56-4504-9153-881edd907bea",
       "unresolved": false
