@@ -1,0 +1,95 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d0f53fbc_6ceb4bb6",
+        "filename": "SoupToNuts/iris_sklearn.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-05-01T13:30:06Z",
+      "side": 1,
+      "message": "These are available in PyPI ?",
+      "revId": "abd3d2237bbbe33879767243653b1bf051543838",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e78b872a_fb631c73",
+        "filename": "SoupToNuts/iris_sklearn.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-05-01T13:30:06Z",
+      "side": 1,
+      "message": "Please remove hardcoded path.  Use /tmp",
+      "revId": "abd3d2237bbbe33879767243653b1bf051543838",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5bb56fd0_9183c036",
+        "filename": "SoupToNuts/iris_tester.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-05-01T13:30:06Z",
+      "side": 1,
+      "message": "Where is iris_model_pb2 available?",
+      "range": {
+        "startLine": 1,
+        "startChar": 10,
+        "endLine": 1,
+        "endChar": 11
+      },
+      "revId": "abd3d2237bbbe33879767243653b1bf051543838",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c6f4a45e_b29e3e13",
+        "filename": "SoupToNuts/iris_tester.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-05-01T13:30:06Z",
+      "side": 1,
+      "message": "Is this a well-known library?",
+      "revId": "abd3d2237bbbe33879767243653b1bf051543838",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4192598b_55a9d40a",
+        "filename": "SoupToNuts/iris_tester.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-05-01T13:30:06Z",
+      "side": 1,
+      "message": "Please explain this url, anyone using the sample must change it, right?",
+      "revId": "abd3d2237bbbe33879767243653b1bf051543838",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
