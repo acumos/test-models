@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "9d26bf25_d6718fe1",
+        "filename": "SoupToNuts/iris_sklearn.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-05-02T12:13:08Z",
+      "side": 1,
+      "message": "I think Amy and Bryan will insist on seeing the Acumos/Apache license header here.",
+      "parentUuid": "a8aa4e7b_c2267e3c",
+      "revId": "abd3d2237bbbe33879767243653b1bf051543838",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "e78b872a_fb631c73",
         "filename": "SoupToNuts/iris_sklearn.py",
         "patchSetId": 1
@@ -66,6 +84,24 @@
       "side": 1,
       "message": "This is example code. Not meant to work everywhere.",
       "parentUuid": "e78b872a_fb631c73",
+      "revId": "abd3d2237bbbe33879767243653b1bf051543838",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9f137021_f972df07",
+        "filename": "SoupToNuts/iris_sklearn.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-05-02T12:13:08Z",
+      "side": 1,
+      "message": "But your name should not appear, and it shouldn\u0027t be so macos-specific.  Using /tmp is a bit better.  Please?",
+      "parentUuid": "f51f0f69_542152e5",
       "revId": "abd3d2237bbbe33879767243653b1bf051543838",
       "serverId": "655300a2-7a56-4504-9153-881edd907bea",
       "unresolved": false
@@ -107,6 +143,30 @@
       "side": 1,
       "message": "It\u0027s what the protobuf model.proto compiles into. Described in the document from which these code snippets are pulled. I may actually at it to the repo.",
       "parentUuid": "5bb56fd0_9183c036",
+      "range": {
+        "startLine": 1,
+        "startChar": 10,
+        "endLine": 1,
+        "endChar": 11
+      },
+      "revId": "abd3d2237bbbe33879767243653b1bf051543838",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b624bcea_ea0a9e20",
+        "filename": "SoupToNuts/iris_tester.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-05-02T12:13:08Z",
+      "side": 1,
+      "message": "I think Amy and Bryan will insist on seeing the Acumos/Apache license header here.",
+      "parentUuid": "ead3917f_f454c727",
       "range": {
         "startLine": 1,
         "startChar": 10,
@@ -183,6 +243,24 @@
       "side": 1,
       "message": "Again, example code, explained in the doc. Can you have MS word docs in a gerrit repo, or is that verboten?",
       "parentUuid": "4192598b_55a9d40a",
+      "revId": "abd3d2237bbbe33879767243653b1bf051543838",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d63cade9_937f0859",
+        "filename": "SoupToNuts/iris_tester.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-05-02T12:13:08Z",
+      "side": 1,
+      "message": "In general you want to avoid binary objects; docx is a zip archive under the covers.  RST is much preferable.",
+      "parentUuid": "5aa08419_4b18429d",
       "revId": "abd3d2237bbbe33879767243653b1bf051543838",
       "serverId": "655300a2-7a56-4504-9153-881edd907bea",
       "unresolved": false
