@@ -55,6 +55,24 @@
     },
     {
       "key": {
+        "uuid": "085e6996_a924d9e5",
+        "filename": "SoupToNuts/iris_sklearn.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 8
+      },
+      "writtenOn": "2018-05-02T21:20:55Z",
+      "side": 1,
+      "message": "Amy already asked for this. I\u0027m willing to do it, but I don\u0027t like the fact that it makes this code different from what\u0027s in my tutorial document.",
+      "parentUuid": "9d26bf25_d6718fe1",
+      "revId": "abd3d2237bbbe33879767243653b1bf051543838",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "e78b872a_fb631c73",
         "filename": "SoupToNuts/iris_sklearn.py",
         "patchSetId": 1
@@ -102,6 +120,24 @@
       "side": 1,
       "message": "But your name should not appear, and it shouldn\u0027t be so macos-specific.  Using /tmp is a bit better.  Please?",
       "parentUuid": "f51f0f69_542152e5",
+      "revId": "abd3d2237bbbe33879767243653b1bf051543838",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bc25b228_d51a238b",
+        "filename": "SoupToNuts/iris_sklearn.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 8
+      },
+      "writtenOn": "2018-05-02T21:20:55Z",
+      "side": 1,
+      "message": "Thing is, this code is exactly what\u0027s in my document--which is the main useful thing here--and I want it to be exactly the same as what\u0027s in the document,\n\nAlso, /tmp is a Unix-specific thing, and won\u0027t work on a Windows system, which we support for modelers.\n\nThere is some OS-independent way of creating a temp directory in Python, but I don\u0027t feel it\u0027s helpful to complicate sample code in this way.\n\nAs for my name appearing, I have many screenshots in the document (which, again, is the main thing), and I cannot effectively censor my name from these, where it appears. I\u0027m aiming for consistency.",
+      "parentUuid": "9f137021_f972df07",
       "revId": "abd3d2237bbbe33879767243653b1bf051543838",
       "serverId": "655300a2-7a56-4504-9153-881edd907bea",
       "unresolved": false
