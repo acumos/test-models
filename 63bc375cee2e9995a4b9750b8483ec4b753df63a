@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f2b276bf_594a7997",
+        "filename": "SoupToNuts/iris_sklearn.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-05-04T14:19:36Z",
+      "side": 1,
+      "message": "this matches the tutorial here: https://wiki.acumos.org/display/AC/Soup-to-Nuts+Example%3A+Onboarding%2C+Downloading%2C+Deploying%2C+and+Using+a+Model+in+Acumos\nI\u0027m assuming modelers are smart enough to change the directory.",
+      "range": {
+        "startLine": 56,
+        "startChar": 34,
+        "endLine": 56,
+        "endChar": 54
+      },
+      "revId": "63bc375cee2e9995a4b9750b8483ec4b753df63a",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
