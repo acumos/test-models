@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2a44d271_9c1289f2",
+        "filename": "Customer_segmentation/main.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-05-16T00:24:32Z",
+      "side": 1,
+      "message": "Please add Acumos license header",
+      "revId": "9dda31c94eccc6ac6c87120a5d80c7d6f265ed14",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bb5960db_3aad5553",
+        "filename": "Customer_segmentation/main.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-05-16T00:24:32Z",
+      "side": 1,
+      "message": "Remove author ID",
+      "revId": "9dda31c94eccc6ac6c87120a5d80c7d6f265ed14",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "01ea369b_648bb239",
+        "filename": "Customer_segmentation/main.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-05-16T00:24:32Z",
+      "side": 1,
+      "message": "please add a comment about what this does",
+      "revId": "9dda31c94eccc6ac6c87120a5d80c7d6f265ed14",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e697e2d9_4fcaed74",
+        "filename": "crossSell_Analytics/main.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-05-16T00:24:32Z",
+      "side": 1,
+      "message": "Please add acumos header",
+      "revId": "9dda31c94eccc6ac6c87120a5d80c7d6f265ed14",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2d11fcf5_992eb544",
+        "filename": "crossSell_Analytics/main.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-05-16T00:24:32Z",
+      "side": 1,
+      "message": "remove author lines (plural)",
+      "revId": "9dda31c94eccc6ac6c87120a5d80c7d6f265ed14",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "70574956_d27c21fb",
+        "filename": "crossSell_Analytics/main.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-05-16T00:24:32Z",
+      "side": 1,
+      "message": "Add a documentation block explaining what this does",
+      "revId": "9dda31c94eccc6ac6c87120a5d80c7d6f265ed14",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
