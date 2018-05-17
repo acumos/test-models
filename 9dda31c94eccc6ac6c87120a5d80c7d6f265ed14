@@ -53,6 +53,23 @@
     },
     {
       "key": {
+        "uuid": "d1067776_f1ab2eca",
+        "filename": "Customer_segmentation/main.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-05-17T19:35:11Z",
+      "side": 1,
+      "message": "What about this file - Digital_data.csv - I don\u0027t see that in this review but it looks important (?)",
+      "revId": "9dda31c94eccc6ac6c87120a5d80c7d6f265ed14",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "e697e2d9_4fcaed74",
         "filename": "crossSell_Analytics/main.py",
         "patchSetId": 1
