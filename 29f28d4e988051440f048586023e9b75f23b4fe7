@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a84904d_ce6e5367",
+        "filename": "docs/Cross-Sell_Analytics_v0.1.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-05-24T12:24:48Z",
+      "side": 1,
+      "message": "Do you really want to build a version number into the documentation file name? This is uncommon practice, and requires changing the index file at each version bump.  Instead I recommend just use a plain file name and put the version number INTO the file.",
+      "revId": "29f28d4e988051440f048586023e9b75f23b4fe7",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "65a7f3a2_bf6ff03b",
+        "filename": "docs/Cross-Sell_Analytics_v0.1.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-05-24T12:24:48Z",
+      "side": 1,
+      "message": "RST can generate a table of contents - you don\u0027t have to construct it by hand - right?",
+      "revId": "29f28d4e988051440f048586023e9b75f23b4fe7",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7d53167c_c19dc6c0",
+        "filename": "docs/Digital_Customer_Segmentation_v0.1.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-05-24T12:24:48Z",
+      "side": 1,
+      "message": "Same comment about putting version number into file NAME versus inside the file.",
+      "revId": "29f28d4e988051440f048586023e9b75f23b4fe7",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aeb5c089_29b21f82",
+        "filename": "docs/media/Cimage0.png",
+        "patchSetId": 6
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-05-24T12:24:48Z",
+      "side": 1,
+      "message": "The image captured from Excel isn\u0027t so great, the first column shows 2.02E+11, the classic problem of a column that\u0027s too narrow, would you please recapture?",
+      "revId": "29f28d4e988051440f048586023e9b75f23b4fe7",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
