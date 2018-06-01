@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6753ead3_f909d4dc",
+        "filename": "tools/onboard-model.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 51
+      },
+      "writtenOn": "2018-06-01T21:00:06Z",
+      "side": 1,
+      "message": "do you mean model.zip?",
+      "range": {
+        "startLine": 27,
+        "startChar": 4,
+        "endLine": 27,
+        "endChar": 15
+      },
+      "revId": "e92f7870e31ebbafb247dcbe2eb7726ad24ee4b8",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
