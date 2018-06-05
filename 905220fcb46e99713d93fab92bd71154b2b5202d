@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "429e6775_f7792afc",
+        "filename": "Customer_segmentation/main.py",
+        "patchSetId": 8
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-06-05T17:47:04Z",
+      "side": 1,
+      "message": "Where is this data file?  Can a sample be included here?",
+      "range": {
+        "startLine": 33,
+        "startChar": 31,
+        "endLine": 33,
+        "endChar": 47
+      },
+      "revId": "905220fcb46e99713d93fab92bd71154b2b5202d",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "abd39e5b_71453e6d",
+        "filename": "crossSell_Analytics/main.py",
+        "patchSetId": 8
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-06-05T17:47:04Z",
+      "side": 1,
+      "message": "I see Cross_Sell.csv as part of this commit but not .xlsx.",
+      "range": {
+        "startLine": 31,
+        "startChar": 33,
+        "endLine": 31,
+        "endChar": 48
+      },
+      "revId": "905220fcb46e99713d93fab92bd71154b2b5202d",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
