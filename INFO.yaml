@@ -1,0 +1,57 @@
+---
+project: 'test-models'
+project_creation_date: '2018-03-05'
+project_category: ''
+lifecycle_state: 'Incubation'
+project_lead: &acumos_training_ptl
+    name: 'Pantelis Monogioudis'
+    email: 'pantelis.monogioudis@nokia.com'
+    id: ''
+    company: 'Nokia'
+    timezone: ''
+primary_contact: '*acumos_training_ptl'
+issue_tracking:
+    type: 'jira'
+    url: 'https://jira.acumos.org/projects/ACUMOS'
+    key: 'ACUMOS'
+mailing_list:
+    type: 'groups.io'
+    url: 'lists.acumos.org'
+    tag: '<[sub-project_name]>'
+realtime_discussion:
+    type: 'irc'
+    server: 'freenode.net'
+    channel: '#lf-releng'
+meetings:
+    - type: 'zoom'
+      agenda: ''
+      url: ''
+      server: 'n/a'
+      channel: 'n/a'
+      repeats: 'n/a'
+      time: 'n/a'
+repositories:
+    - 'test-models'
+committers:
+    - <<: *acumos_training_ptl
+    - name: 'Aimee Ukasick'
+      email: 'aimeeu@research.att.com'
+      company: 'ATT'
+      id: 'aimeeu'
+      timezone: ''
+    - name: 'Bryan Sullivan'
+      email: 'bryan.sullivan@att.com'
+      company: 'ATT'
+      id: 'blsaws'
+      timezone: ''
+    - name: 'Manoop Talasila'
+      email: 'talasila@research.att.com'
+      company: 'ATT'
+      id: 'talasila'
+      timezone: ''
+tsc:
+    approval: ''
+    changes:
+        - type: ''
+          name: ''
+          link: ''
