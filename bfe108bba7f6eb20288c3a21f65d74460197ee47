@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "88b4c7c3_f4cf792f",
+        "filename": "INFO.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 212
+      },
+      "writtenOn": "2018-07-18T11:57:12Z",
+      "side": 1,
+      "message": "I figured that test-model was under the responsability of on-boarding not training. If training, this change must be merged quickly because it is open since more than 36 business hours.\nIf on-boarding, project leader must be changed by my name and then merged",
+      "range": {
+        "startLine": 7,
+        "startChar": 11,
+        "endLine": 8,
+        "endChar": 43
+      },
+      "revId": "bfe108bba7f6eb20288c3a21f65d74460197ee47",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
