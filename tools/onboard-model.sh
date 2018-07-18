@@ -28,7 +28,7 @@
 #
 # Usage:
 # $ bash onboard-model.sh <host> <username> <password> <model> <insecure>
-#   host: host of the model onboarding service
+#   host: host of the model onboarding service, including port if needed
 #   username: username to onboard models for
 #   password: password for user
 #   model: folder with model to onboard
@@ -54,39 +54,48 @@ function onboard() {
   AUTHURL=https://$host/onboarding-app/v2/auth
   PUSHURL=https://$host/onboarding-app/v2/models
 
-  log "Query rest service to get token"
-  resp=$(curl -k -X POST -H 'Content-Type: application/json' -H 'Accept: application/json' $AUTHURL -d "{\"request_body\":{\"username\":\"$user\",\"password\":\"$pass\"}}")
-  jwtToken=$(echo "$resp" | jq -r '.jwtToken')
+  log "Query rest service at host $host to get token"
+  curl -o ~/json -k -X POST -H 'Content-Type: application/json' -H 'Accept: application/json' $AUTHURL -d "{\"request_body\":{\"username\":\"$user\",\"password\":\"$pass\"}}"
+  if [[ $(grep -c "doctype html" ~/json) -gt 0 ]]; then 
+    cat ~/json
+    fail "Authentication failed at host $host"
+  fi
+  jwtToken=$(jq -r '.jwtToken' ~/json)
+  if [[ "$jwtToken" == "null" ]]; then 
+    cat ~/json
+    fail "Authentication failed at hpst $host"
+  fi
 
   # Use this jwtToken for all the bootstrap onboarding
-  if [ "$jwtToken" != "null" ]
-  then
-    log "Authentication successful"
-    echo "Onboarding model $model ..."
-    if [[ "$insecure" == "insecure" ]]; then k="-k"; fi
-    curl -o ~/json $k -H "Authorization: $jwtToken"\
-         -F "model=@$model/model.zip;type=application/zip" \
-         -F "metadata=@$model/metadata.json;type=application/json"\
-         -F "schema=@$model/model.proto;type=application/text" $PUSHURL
-    if [[ $(grep -c "The upstream server is timing out" ~/json) -eq 1 ]]; then 
-      log "Onboarding $model failed: $(cat ~/json)"
-    else
-      status=$(jq -r '.status' ~/json)
-      if [[ "$status" != "ERROR" ]]; then
-        log "Onboarding $model succeeded"
-      else
-        log "Onboarding $model failed: $(cat ~/json)"
-      fi
-    fi
+  log "Authentication successful"
+  echo "Onboarding model $2 at $host ..."
+  if [[ "$insecure" == "insecure" ]]; then k="-k"; fi
+  curl -o ~/json $k -H "Authorization: $jwtToken"\
+       -F "model=@$model/model.zip;type=application/zip" \
+       -F "metadata=@$model/metadata.json;type=application/json"\
+       -F "schema=@$model/model.proto;type=application/text" $PUSHURL
+  if [[ $(grep -c -e "The upstream server is timing out" -e "Service unavailable" ~/json) -gt 0 ]]; then 
+    log "Onboarding $model failed at host $host"
+    cat ~/json
   else
-      log 'Authentication failed, response = ' $resp
-      log 'Cannot continue, exiting'
+    status=$(jq -r '.status' ~/json)
+    if [[ "$status" != "ERROR" ]]; then
+      log "Onboarding $model succeeded at host $host"
+    else
+      log "Onboarding $model failed at host $host"
+      cat ~/json
+    fi
   fi
 }
 
-host=$1
-user=$2
-pass=$3
-model="$4"
-insecure=$5
-onboard
+if [[ "$#" -lt 4 ]]; then
+  echo "All required parameters not provided"
+  if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then grep '#\.' $0; fi
+else
+  host=$1
+  user=$2
+  pass=$3
+  model="$4"
+  insecure=$5
+  onboard
+fi
