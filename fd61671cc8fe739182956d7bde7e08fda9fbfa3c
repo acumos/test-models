@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6a7235bb_49b739e4",
+        "filename": "tools/dump-model.sh",
+        "patchSetId": 6
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-08-07T14:05:50Z",
+      "side": 1,
+      "message": "singular or plural?",
+      "range": {
+        "startLine": 30,
+        "startChar": 20,
+        "endLine": 30,
+        "endChar": 21
+      },
+      "revId": "fd61671cc8fe739182956d7bde7e08fda9fbfa3c",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
