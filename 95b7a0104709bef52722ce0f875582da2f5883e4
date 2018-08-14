@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1fdfa41a_d298bac4",
+        "filename": "tools/onboard-model.sh",
+        "patchSetId": 7
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-08-14T12:00:16Z",
+      "side": 1,
+      "message": "Soon on-boarding should use the API token, no longer the JWT thing.",
+      "range": {
+        "startLine": 57,
+        "startChar": 0,
+        "endLine": 57,
+        "endChar": 53
+      },
+      "revId": "95b7a0104709bef52722ce0f875582da2f5883e4",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
