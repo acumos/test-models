@@ -22,6 +22,30 @@
       "revId": "e494d8616fb2b5ff2c41baaa093637781601c38f",
       "serverId": "655300a2-7a56-4504-9153-881edd907bea",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cbce8f6b_0d59c6f4",
+        "filename": "java/tools/datasource/pom.xml",
+        "patchSetId": 8
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2018-09-07T19:55:31Z",
+      "side": 1,
+      "message": "\u003e I didn\u0027t want to change the group without consulting you guys -\n \u003e what should this be?\n\n\"org.acumos.test-models.tools\" might be better. Any other suggestion?\n\nReason I choose \"test-models\" in the package is that I believe LF restricts a repo to release its libraries under its root repo paths. Meaning, code under repo1 cannot release a library with repo2 package name.",
+      "parentUuid": "eb355e83_7260d568",
+      "range": {
+        "startLine": 17,
+        "startChar": 10,
+        "endLine": 17,
+        "endChar": 34
+      },
+      "revId": "e494d8616fb2b5ff2c41baaa093637781601c38f",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
     }
   ]
 }
