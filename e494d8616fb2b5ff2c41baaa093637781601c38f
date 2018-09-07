@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eb355e83_7260d568",
+        "filename": "java/tools/datasource/pom.xml",
+        "patchSetId": 8
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-07T19:40:47Z",
+      "side": 1,
+      "message": "I didn\u0027t want to change the group without consulting you guys - what should this be?",
+      "range": {
+        "startLine": 17,
+        "startChar": 10,
+        "endLine": 17,
+        "endChar": 34
+      },
+      "revId": "e494d8616fb2b5ff2c41baaa093637781601c38f",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
