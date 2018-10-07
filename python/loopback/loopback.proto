@@ -1,0 +1,10 @@
+syntax = "proto3";
+package simplepackage;
+
+service Model {
+  rpc loopback (SimpleMessage) returns (SimpleMessage);
+}
+
+message SimpleMessage {
+  string s = 1;
+}
