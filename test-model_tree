@@ -1,0 +1,80 @@
+.
+├── deprecated_rework
+│   ├── acoustic_emission
+│   │   └── main.py
+│   ├── ImageClassification
+│   │   └── main.py
+│   ├── SpamDetection
+│   │   └── main.py
+│   ├── TextEmoji
+│   │   └── main.py
+│   └── TwitterFacebookRestPost
+│       └── main.py
+├── docs
+│   ├── Cross-Sell_Analytics
+│   │   ├── Cross-Sell_Analytics.rst
+│   │   └── media
+│   │       ├── Cimage0.png
+│   │       ├── Cimage1.png
+│   │       ├── Cimage2.png
+│   │       └── Cimage3.png
+│   ├── Digital_Customer_Segmentation
+│   │   ├── Digital_Customer_Segmentation.rst
+│   │   └── media
+│   │       ├── D mage0.png
+│   │       ├── Dimage1.png
+│   │       └── Dimage2.png
+│   └── index.rst
+├── INFO.yaml
+├── java
+│   └── tools
+│       └── datasource
+│           ├── pom.xml
+│           ├── README.md
+│           └── src
+│               ├── main
+│               │   ├── java
+│               │   │   └── org
+│               │   │       └── acumos
+│               │   │           └── datasource
+│               │   │               ├── config
+│               │   │               │   └── SwaggerConfiguration.java
+│               │   │               ├── controller
+│               │   │               │   └── DatasourceController.java
+│               │   │               ├── DataSourceApplication.java
+│               │   │               ├── service
+│               │   │               │   ├── ProtobufServiceImpl.java
+│               │   │               │   └── ProtobufService.java
+│               │   │               ├── util
+│               │   │               │   ├── Constants.java
+│               │   │               │   └── ProtobufUtil.java
+│               │   │               └── vo
+│               │   │                   ├── Configuration.java
+│               │   │                   ├── Protobuf.java
+│               │   │                   ├── ProtobufMessageField.java
+│               │   │                   ├── ProtobufMessage.java
+│               │   │                   ├── ProtobufOption.java
+│               │   │                   ├── ProtobufService.java
+│               │   │                   ├── ProtobufServiceOperation.java
+│               │   │                   └── Result.java
+│               │   └── resources
+│               │       └── application.properties
+│               └── test
+│                   └── java
+│                       └── org
+│                           └── acumos
+│                               └── datasource
+│                                   └── AppTest.java
+├── LICENSE.txt
+├── python
+│   └── SoupToNuts
+│       ├── iris-sklearn-demo.sh
+│       ├── iris_sklearn.py
+│       └── iris_tester.py
+├── README.rst
+├── test-model_tree
+└── tools
+    ├── dump-model.sh
+    └── onboard-model.sh
+
+34 directories, 43 files
