@@ -16,9 +16,9 @@
 .. limitations under the License.
 .. ===============LICENSE_END=========================================================
 
-====================
-Image Classification
-====================
+==============================
+Test Models and Demonstrations
+==============================
 
 .. toctree::
        :maxdepth: 2

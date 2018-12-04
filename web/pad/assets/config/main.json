@@ -1,0 +1,153 @@
+{
+    "pipelines":{
+        "all":{
+            "name":"all",
+            "models":[],
+            "content":null
+        },
+        "face": {
+            "name":"face",
+            "models":["res_face_detect", "res_face_pixelate", "res_face_detect_alt", "res_face_recognition"],
+            "content":["face_reunion", "face_family", "commercial","face_Schwarzenegger", "face_DeGeneres"]
+        },
+        "mood": {
+            "name":"mood",
+            "models":["res_image_classifier", "res_image_mood", "res_object_recognition"],
+            "content":["example_excitement_2","example_awe_1","example_excitement_1","example_sad_1"]
+        },
+        "analytics": {
+            "name":"analytics",
+            "models":["res_image_classifier", "res_object_recognition", "res_frame_rank", "res_logo_recognition"],
+            "content":["example_img_bikes", "example_video_cars","example_video_bikes","example_video_coast","example_video_squirrel",
+                        "example_video_dogs","example_video_scuba", "commercial", "face_reunion", "example_awe_1",
+                        "brand_store_att"]
+        },
+        "analytics_aio": {
+            "name":"analytics_aio",
+            "models":["res_image_aio"],
+            "content":["example_img_bikes", "example_video_cars","example_video_bikes",
+                        "example_video_dogs","example_video_scuba", "commercial", "example_excitement_2","example_awe_1"]
+        },        
+        "none":{
+            "name":"none",
+            "models":null,
+            "content":null
+        }
+    },
+    "models":{
+        "res_face_detect":{"order":1, "name":"Face Detection", "template":"template_class", 
+            "method":"detect", "port":8564, "source":null, "proto":"assets/proto/model.detect.proto"},
+        "res_face_pixelate":{"order":2, "name":"Face Blur", "template":"template_image", 
+            "method":"pixelate", "port":8558, "source":"res_face_detect", "proto":"assets/proto/model.pixelate.proto"},
+        "res_face_detect_alt":{"order":3, "name":"Face Detection (alt)", "template":"template_class", 
+            "method":"detect", "port":8560, "source":null, "proto":"assets/proto/model.recognize.proto"},
+        "res_face_recognition":{"order":4, "name":"Face Recognition", "template":"template_class", 
+            "method":"recognize", "port":8560, "source":"res_face_detect_alt", "proto":"assets/proto/model.recognize.proto"},
+        "res_image_classifier":{"order":10, "name":"Image Classification", "template":"template_class", 
+            "method":"classify", "port":8565, "source":null, "proto":"assets/proto/model.image.proto"},
+        "res_image_mood":{"order":11, "name":"Image Mood", "template":"template_class", 
+            "method":"classify", "port":8561, "source":"res_image_classifier", "proto":"assets/proto/model.tag.proto"},
+        "res_object_recognition":{"order":12, "name":"Object Recognition", "template":"template_class",
+            "method":"recognize", "port":8559, "source":null, "proto":"assets/proto/model.object.proto"},
+        "res_logo_recognition":{"order":13, "name":"Logo Recognition", "template":"template_class",
+            "method":"recognize", "port":8571, "source":null, "proto":"assets/proto/model.object.proto"},
+        "res_frame_rank":{"order":20, "name":"Frame Ranking", "template":"template_frames",
+            "method":"score_one", "port":8570, "source":null, "proto":"assets/proto/model.frame_ranker.proto"},
+        "res_image_aio":{"order":99, "name":"All in One Video Analytics", "template":"template_image",
+            "method":"analyze_image", "port":8555, "source":null, "proto":"assets/proto/model.video_analytics.proto"}
+        },
+    "content": {
+        "face_reunion":{
+            "url": "assets/content/face_reunion.jpg",
+            "source": "https://flic.kr/p/bEgYbs",
+            "name": "reunion (flickr)"
+        },
+        "face_family":{
+            "url": "assets/content/face_family.jpg",
+            "source": "https://www.pexels.com/photo/adult-affection-beautiful-beauty-265764",
+            "name": "family (pexels)"
+        },
+        "commercial":{
+            "url": "assets/content/commercial.jpg",
+            "movie": "assets/content/commercial.mp4",
+            "source": "https://www.youtube.com/watch?v=34KfCNapnUg",
+            "name": "commercial"
+        },
+        "face_Schwarzenegger":{
+            "url": "assets/content/face_Schwarzenegger.jpg",
+            "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/A._Schwarzenegger.jpg/220px-A._Schwarzenegger.jpg",
+            "name": "Schwarzenegger (wikipedia)"
+        },            
+        "face_DeGeneres":{
+            "url": "assets/content/face_DeGeneres.jpg",
+            "source": "https://en.wikipedia.org/wiki/Ellen_DeGeneres#/media/File:Ellen_DeGeneres-2009.jpg",
+            "name": "DeGeneres (wikipedia)"
+        },
+        "example_excitement_2":{
+            "url": "assets/content/example_excitement_2.jpg",
+            "source": "https://www.pexels.com/photo/red-green-hot-air-balloon-during-daytime-51377/",
+            "name": "exciting balloons"
+        },
+        "example_awe_1":{
+            "url": "assets/content/example_awe_1.jpg",
+            "source": "https://www.pexels.com/photo/art-beach-beautiful-clouds-269583",
+            "name": "beach awe"
+        },
+        "example_excitement_1":{
+            "url": "assets/content/example_excitement_1.jpg",
+            "source": "https://www.pexels.com/photo/sea-man-person-holiday-6557",
+            "name": "ocean excitement"
+        },
+        "example_sad_1":{
+            "url": "assets/content/example_sad_1.jpg",
+            "source": "https://www.pexels.com/photo/burial-cemetery-countryside-cross-116909",
+            "name": "sad cemetry"
+        },
+        "example_img_bikes":{
+            "url": "assets/content/stock-footage-bicycles.jpg",
+            "source": "https://videos.pexels.com/videos/mountain-bikers-during-daytime-857083",
+            "name": "bikes (image)"
+        },
+        "example_video_cars":{
+            "movie": "assets/content/stock-footage-city-cars.mp4",
+            "url": "assets/content/stock-footage-city-cars.jpg",
+            "source": "https://videos.pexels.com/videos/cars-on-the-road-854745",
+            "name": "city-cars"
+        },
+        "example_video_bikes":{
+            "movie": "assets/content/stock-footage-bicycles.mp4",
+            "url": "assets/content/stock-footage-bicycles.jpg",
+            "source": "https://videos.pexels.com/videos/mountain-bikers-during-daytime-857083",
+            "name": "bikes"
+        },
+        "example_video_coast":{
+            "movie": "assets/content/stock-footage-coast-time.mp4",
+            "url": "assets/content/stock-footage-coast-time.jpg",
+            "source": "https://videos.pexels.com/videos/sunset-by-the-sea-857056",
+            "name": "costal-lapse"
+        },
+        "example_video_squirrel":{
+            "url": "assets/content/stock-footage-squirrel.jpg",
+            "movie": "assets/content/stock-footage-squirrel.mp4",
+            "source": "https://videos.pexels.com/videos/squirrel-eating-855213",
+            "name": "squirrel"
+        },
+        "example_video_dogs":{
+            "url": "assets/content/stock-footage-dogs.jpg",
+            "movie": "assets/content/stock-footage-dogs.mp4",
+            "source": "https://videos.pexels.com/videos/dogs-playing-853846",
+            "name": "park-dogs"
+        },
+        "example_video_scuba":{
+            "movie": "assets/content/stock-footage-scuba.mp4",
+            "url": "assets/content/stock-footage-scuba.jpg",
+            "source": "https://videos.pexels.com/videos/paddle-surfing-and-scuba-diving-video-854387",
+            "name": "scuba"
+        },
+        "brand_store_att":{
+            "url": "assets/content/brand_storefront_att.jpg",
+            "source": "https://flic.kr/p/nuBnvf",
+            "name": "brand store"
+        }
+    }
+}

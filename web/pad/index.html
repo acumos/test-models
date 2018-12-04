@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html ng-app="pad" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acumos PAD</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11" >
+    <link rel="stylesheet" type="text/css" href="css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/vendor/video-js.css" />
+    <link rel="stylesheet" href="css/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/pad.css" />
+    <link rel="icon" href="assets/favicon.png">
+</head>
+
+<body ng-controller="padCtrl">
+    <nav class="navbar navbar-dark bg-dark navbar-fixed-top ">
+        <a class="navbar-brand" href="/">
+            <img alt="Brand" src="assets/favicon_white.png" />
+            Pipeline Application Demo (PAD) for Acumos
+        </a>
+        <span class="border border-light pl-1 pr-1 rounded">
+            <span class="navbar-text">
+                Samples <span class="badge badge-success">{{results.all.stats.samples}}</span>
+            </span>
+            <span class="navbar-text">
+                Latency <span class="badge badge-primary">{{results.all.stats.latency}} ms</span>
+            </span>
+            <span class="navbar-text">
+                Dropped <span class="badge badge-danger">{{results.all.stats.dropped}}</span>
+            </span>
+        </span>
+        <span >
+            <select ng-model="config.state.pipeline"  class="form-control-sm" ng-change="fn.pipeline_select()">
+                <option ng-repeat="(k,opt) in pipelines track by k" value="{{ k }}">{{opt.name}}</option>
+            </select>
+            <button type="button" class="btn form-control-sm btn-secondary btn-sm " 
+                    data-toggle="tooltip" data-placement="bottom" 
+                    title="take a snapshot of the current configuration to resume later" 
+                    ng-click="fn.config_download()" >
+                Configuration
+                <i class="fa fa-external-link-alt" aria-hidden="true"></i>
+            </button>
+            <button type="button" class="btn form-control-sm btn-secondary btn-sm " 
+                    data-toggle="modal" data-placement="bottom" data-target="#configModal"
+                    title="configure the application" 
+                    ng-click="" >
+                Options
+                <i class="fa fa-cogs" aria-hidden="true"></i>
+            </button>
+        </span>
+    </nav>
+
+
+    <div class="container-fluid" >
+        <div class="row p-2"  >
+            <div class="col-lg-3 col-sm-6 mt-1 pl-1 pr-0">
+                <div class="card border-dark">
+                    <div class="card-body row m-0 p-0 container-fluid">
+                        <canvas id="canvas_all" class="mx-auto h-100 w-100-webkit" crossorigin></canvas>
+                        <img id="canvas_default" style="display:none" class=" mx-auto w-100-webkit h-100" src="assets/placeholder.jpg" 
+                            alt="Sample {{ results.all.last.sample }}"
+                            ng-src="{{ fn.canvas_data(results.all.last.sample) }}" />
+                        <!-- https://github.com/angular/angular.js/issues/1352#issuecomment-75995935 -->
+                        <video class="border-dark float-left border p-0 position-absolute bg-dark col-md-5 m-1" 
+                                id="source_video" width="120" height="85" muted controls crossorigin
+                                ng-if="assets[config.state.asset].movie != null" 
+                                ng-src="{{ assets[config.state.asset].movie }}"  >
+                                <!-- ng-click="fn.video_toggle($event)"  >  -->
+                            <source ng-src="{{ assets[config.state.asset].movie }}" 
+                                src="assets/content/stock-footage-scuba.mp4" type="video/mp4" >
+                            Your browser does not support the video tag. Please use Chrome or Firefox.
+                        </video>
+                    </div>
+                    <div class="card-footer">
+                        <div class="row container-fluid">
+                            <div class="col-md-8 col-md-push-8 ">
+                                    Original Review
+                            </div>
+                            <div class="col-md-4 col-md-pull-4">
+                                <span class="badge badge-success">{{ results.all.last.sample }} </span>
+                            </div>                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-6 col-s-12 mt-1 pl-1 pr-0">
+                <div class="card border-dark">
+                    <div class="card-body ">
+                        <table class="table table-sm table-hover">
+                            <thead>
+                                <tr>
+                                    <th scope="col">on</th>
+                                    <th scope="col">model</th>
+                                    <th scope="col">proto</th>
+                                    <th scope="col">input</th>
+                                    <th scope="col">output</th>
+                                    <th scope="col">latency</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- ICONS https://fontawesome.com/icons?d=gallery&m=free -->
+                                <tr ng-repeat="(key,opt) in results track by key | orderBy:opt.order" 
+                                        ng-if="key!=root_sync_model && opt.visible">
+                                    <th scope="row"><i class=" fas pointer" 
+                                        ng-class="opt.enabled ? (opt.blocked ? 'fa-unlink text-danger' : 'fa-check text-primary') : 'fa-times text-primary'" 
+                                        data-toggle="tooltip" data-placement="bottom" 
+                                        title="model dependency: {{models[key].source==null ? 'none' : models[models[key].source].name}}" 
+                                        ng-click="fn.model_toggle(key)" aria-hidden="true"></i></td></th>
+                                    <td>{{ models[key].name }}</td>
+                                    <td><i class="fas text-primary fa-cloud-download-alt pointer" aria-hidden="true"
+                                            ng-click="fn.proto_download(key, 'ref')" ></i></td>
+                                    <td><i class="fas  fa-file-import pointer" aria-hidden="true"
+                                            ng-class="opt.stats.has_in ? 'text-primary' : 'text-muted'"
+                                            ng-click="fn.proto_download(key, 'in')" ></i></td>
+                                    <td><i class="fas text-primary fa-file-export pointer" aria-hidden="true"
+                                            ng-class="opt.stats.has_out ? 'text-primary' : 'text-muted'"
+                                            ng-click="fn.proto_download(key, 'out')" ></i></td>
+                                    <td>{{ opt.stats.latency }} ms</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+
+                    </div>
+                    <div class="card-footer">
+                        <div class="row container-fluid">
+                            <div class="col-md-9 col-md-push-9 ">
+                                Pipeline Activation
+                            </div>
+                            <div class="col-md-3  col-md-pull-3 text-right">
+                                <!-- <button type="button" class="disabled btn btn-success btn-sm">Add</button> -->
+                            </div>                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-sm-6 mt-1 pl-1 pr-0">
+                <div class="card border-dark">
+                    <div class="card-body m-0 pt-0">
+                        <div class="row ">
+                            <div class="mt-1 pl-1 pr-1 col-md-4"  ng-repeat="(key,opt) in assets track by key | orderBy:opt.idx">
+                                <div class="card card-thumbnail border " 
+                                        ng-class="{'border-primary bg-primary text-light': config.state.asset==key, 
+                                                    'border-dark bg-light text-dark': config.state.asset!=key}"
+                                        ng-click="fn.asset_select(key)">
+                                    <!-- ng-src="{{ fn.thumbnail(history[type_list][hist_id].path, history[type_list][hist_id].img) }}" -->
+                                    <div class="card-body row m-0 p-0 container-fluid">
+                                        <img id="{{ key }}" class="mx-auto h-100 w-100-webkit" src="assets/placeholder.jpg" 
+                                            ng-src="{{ opt.url }}" alt="{{opt.name}}">
+                                    </div>
+                                    <div class="card-footer text-center  p-1">
+                                        <small>{{opt.name}}</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-1 pl-1 pr-1 col-md-4" >
+                                <div class="card card-thumbnail border " 
+                                        ng-class="{'border-primary bg-primary text-light': config.state.asset==key, 
+                                                    'border-dark bg-light text-dark': config.state.asset!=key}" >
+                                    <div class="card-body row m-0 p-0 container-fluid">
+                                        <img class="mx-auto h-100 w-100-webkit" src="assets/placeholder.jpg" 
+                                            alt="Uploaded Image">
+                                    </div>
+                                    <div class="card-footer text-center  p-1" style="font-size:xx-small;">
+                                        <file-input on-change="fn.upload_image($event)"></file-input>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="row container-fluid">
+                            <div class="col-md-9 col-md-push-9 ">
+                               Asset Selection
+                            </div>
+                            <div class="col-md-3  col-md-pull-3">
+                                <a href="#image_upload" class="text-right btn btn-primary btn-sm" role="button">Upload</a>
+                            </div>                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--- dynamic modules for each item -->
+
+            <div class='mt-1 pl-1 pr-0 col-lg-4 col-s-12' 
+                ng-repeat="(key,opt) in results track by key | orderBy:opt.order" ng-if="key!=root_sync_model && opt.enabled && !opt.blocked">
+
+                <div class="card border-dark" ng-if="models[key].template=='template_image'">
+                    <!-- template for just an image result -->
+                    <div class="card-body row m-0 p-0 container-fluid">
+                        <img class="border-dark mx-auto w-100-webkit h-100" src="assets/placeholder.jpg" alt="{{opt.name}}"
+                            ng-src="{{ opt.last.data!=null ? opt.last.data.src : fn.canvas_data(-1) }}" />
+                    </div>
+                    <div class="card-footer">
+                        <div class="row container-fluid">
+                            <div class="col-md-8 col-md-push-8 ">
+                                {{ models[key].name }}
+                            </div>
+                            <div class="col-md-4 col-md-pull-4">
+                                <span class="badge badge-success">{{ opt.last.sample }} </span>
+                                <span class="badge badge-danger">{{ opt.stats.dropped }} </span>
+                                <span>
+                                    <i class="fas text-muted fa-hourglass-half" aria-hidden="true" ng-show="opt.stats.waiting!=null"></i>
+                                </span>
+                            </div>                        
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card border-dark" ng-if="models[key].template=='template_class'">
+                    <!-- template for an image and set of classes -->                
+                    <div class="card-body row m-0 p-0 container-fluid">
+                            <div class="col-lg-5 col-sm-4 p-1">
+                            <div class="card border-0">
+                                <div class="card-body row m-0 p-0 container-fluid">
+                                    <canvas id="canvas_{{ key }}" class="mx-auto h-100 rounded w-100-webkit" crossorigin 
+                                            ng-show="opt.last.color!=null"></canvas>
+                                    <img class="border-dark mx-auto rounded  h-100 w-100-webkit" src="assets/placeholder.jpg" alt="{{opt.name}}"
+                                            ng-src="{{ fn.canvas_data(opt.last.sample) }}" ng-show="opt.last.color==null" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-7 col-sm-8  p-0 ">
+                            <table class="table table-sm container-fluid table-hover" ng-if="opt.last.data.length">
+                                <thead>
+                                    <tr>
+                                    <th ng-repeat="(k,v) in opt.last.data[0]" ng-if="!k.startsWith('_')" >{{k}}</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="s in opt.last.data  | orderBy:opt.last.key:true"  >
+                                        <td ng-repeat="(k,v) in opt.last.data[0]" ng-if="!k.startsWith('_')" >
+                                            <span class='colorblock' ng-style="{ 'background-color': fn.canvas_color(s._color) }" 
+                                                ng-if="k==opt.last.color"></span
+                                        >{{s[k]}}</td>
+                                        <!-- must dereference sample so that variable order is the same -->
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="row container-fluid">
+                            <div class="col-md-8 col-md-push-8 ">
+                                {{ models[key].name }}
+                            </div>
+                            <div class="col-md-4 col-md-pull-4">
+                                <span class="badge badge-success">{{ opt.last.sample }} </span>
+                                <span class="badge badge-danger">{{ opt.stats.dropped }} </span>
+                                <span>
+                                    <i class="fas text-muted fa-hourglass-half" aria-hidden="true" ng-show="opt.stats.waiting!=null"></i>
+                                </span>
+                            </div>                        
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card border-dark"  ng-if="models[key].template=='template_frames'" >
+                    <!-- template for a set of image results with to be temporarily queued -->                
+                    <div class="card-body row m-0 p-0 container-fluid">
+                        <div class="card-body m-0 pt-0">
+                            <div class="row ">
+                                <div class="mt-1 pl-1 pr-1 col-md-4"  ng-repeat="s in opt.last.data ">
+                                    <div class="card border-dark card-thumbnail">
+                                        <div class="card-body row m-0 p-0 container-fluid">
+                                            <img class="mx-auto h-100 w-100-webkit" src="assets/placeholder.jpg" 
+                                                 ng-src="{{ fn.canvas_data(s.sample) }}" >
+                                        </div>
+                                        <div class="card-footer text-center  p-1">
+                                            <small>{{s.score}} <span ng-if="s.sample >= 0">(# {{s.sample}})</span></small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>
+                    <div class="card-footer">
+                        <div class="row container-fluid">
+                            <div class="col-md-8 col-md-push-8 ">
+                                {{ models[key].name }}
+                            </div>
+                            <div class="col-md-4 col-md-pull-4">
+                                <span class="badge badge-success">{{ opt.last.sample }} </span>
+                                <span class="badge badge-danger">{{ opt.stats.dropped }} </span>
+                                <span>
+                                    <i class="fas text-muted fa-hourglass-half" aria-hidden="true" ng-show="opt.stats.waiting!=null"></i>
+                                </span>
+                            </div>                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 
+
+            <div class="col-lg-5 col-s-12">
+                <video id="player_large" class="video-js vjs-default-skin vjs-16"
+                    poster='images/video_empty.jpg' sourceOrder='true'
+                    techOrder="['html5','flash']" controls='true'
+                    preload='none' responsive='true' data-setup='{"fluid": true}' >
+        
+                    <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+                </video>
+            </div>
+            -->
+            
+        </div>
+    </div>
+    <footer >
+        <div class="navbar  navbar-dark bg-dark">
+            <div class="container">
+                <div class="col-md-12 ">
+                        <div class="text-center">
+                            <a class="navbar-brand " href="https://github.com/acumos/test-models/web/pad" target="_new">PAD {{config.version}}</a>
+                            | <a class="navbar-brand" href="http://www.research.att.com/sites/labs_research/video_media_analytics" target="_new">Video and Machine Learning Research</a>
+                            | <a class="navbar-brand" href="http://www.att.com" target="_new">© AT&amp;T</a>
+                            | <a class="navbar-brand" href="https://www.acumos.org/" target="_new">Acumos AI</a>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- sticky footer wrapper for alerts that will appear and time out -->
+    <nav class='alert-fixed' >
+        <div class="col-xs-12 ">
+            <div ng-repeat="$alert in alerts" class="alert" role="alert" ng-class="'alert-' + ($alert.type || 'warning')"
+                    dismiss-on-timeout="{{$alert.timeout}}" ng-click="fn.alert_keep($index)"  >
+                <a ng-if="$alert.link" href="{{$alert.link}}">{{$alert.msg}}</a>
+                <span ng-if="!$alert.link" >{{$alert.msg}}</span>
+                <button type="button" class="close" ng-click="fn.alert_close($index)">
+                    <span aria-hidden="true">×</span>
+                    <span class="sr-only">Close</span>
+                </button>
+            </div>
+        </div>
+    </nav>    
+
+    <!-- loading dialog that doesn't go away -->
+    <div class="modal fade " id="loadingModal" tabindex="-1" role="dialog" 
+            aria-labelledby="loading Title" aria-hidden="true" data-backdrop="static"
+            data-keyboard="false">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="configTitle">Loading</h5>
+            </div>
+            <div class="modal-body">
+                Application is loading, please wait...
+            </div>
+            <div class="modal-footer">
+                <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+            </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- sticky footer wrapper for alerts that will appear and time out -->
+    <div class="modal fade" id="configModal" tabindex="-1" role="dialog" 
+            aria-labelledby="configTitle" aria-hidden="true" >
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="configTitle">Configuration</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group" ng-repeat="(kConf, vConf) in config_user ">
+                    <label for="conf_{{name_clean(kConf)}}">{{kConf}}</label>
+                    <input type="text" class="form-control" id="conf_{{name_clean(kConf)}}" 
+                        ng-model="config_user[kConf]" />
+                </div>
+                <hr />
+                <div class="form-group" ng-repeat="(k, v) in models ">
+                    <label for="conf_{{name_clean(k)}}">{{v.name}} Port</label>
+                    <input type="text" class="form-control" id="conf_{{name_clean(k)}}" 
+                        ng-model="v.port" />
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/vendor/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="js/vendor/jquery/jquery-ajax-native.js"></script>
+    <script type="text/javascript" src="js/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="js/vendor/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/vendor/angular/angular.min.js"></script>
+    <script type="text/javascript" src="js/vendor/angular/angular-sanitize.min.js"></script>
+    <script type="text/javascript" src="js/vendor/angular/angular-cookies.min.js"></script>
+    <script type="text/javascript" src="js/vendor/moment.min.js"></script>
+    <script type="text/javascript" src="js/vendor/protobuf.min.js"></script>
+    <script type="text/javascript" src="js/vendor/video.js"></script>
+
+    <script type="text/javascript" src="js/pad.canvas.js"></script>
+    <script type="text/javascript" src="js/pad.proto.js"></script>
+    <script type="text/javascript" src="js/pad.parser.js"></script>
+    <script type="text/javascript" src="js/pad.js"></script>
+</body>
+
+</html>

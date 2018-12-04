@@ -1,0 +1,57 @@
+syntax = "proto3";
+package videoanalytics;
+
+service Model {
+  rpc analyze_image (Image) returns (ImageAnalyticsSet);
+}
+
+message Image {
+  string mime_type = 1;
+  bytes image_binary = 2;
+}
+
+message ImageAnalyticsSet {
+	repeated ImageTag imageTagSetFromClassifier = 1;
+	repeated ImageTag imageTagSetFromMood = 2;
+	repeated RegionDetection regionDetectionSetFromPrivacy = 3;
+	repeated RegionTag regionTagSetFromCeleberity = 4;  
+	string blurredImageMimeTypeFromPixelate = 5;
+	bytes blurredImageBinaryFromPixelate = 6;
+	repeated FoundObject foundObjectListFromCoCo = 7;
+}
+
+message ImageTag {
+	int64 image = 1;
+	string tag = 2;
+	double score = 3;
+}
+
+
+message RegionDetection {
+  int64 image = 1;
+  int64 region = 2;
+  int64 x = 3;
+  int64 y = 4;
+  int64 w = 5;
+  int64 h = 6;
+  string mime_type = 7;
+  bytes image_binary = 8;
+}
+
+message RegionTag {
+  int64 image = 1;
+  int64 region = 2;
+  string tag = 3;
+  double score = 4;
+}
+
+message FoundObject {
+int64 image = 1;
+int64 region = 2;
+int64 left = 3;
+int64 top = 4;
+int64 width = 5;
+int64 height = 6;
+string tag = 7;
+double score = 8;
+}
