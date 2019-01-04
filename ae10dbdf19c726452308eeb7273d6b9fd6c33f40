@@ -1,0 +1,84 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fff0957f_7da7313b",
+        "filename": "python/crossSell/crosssell_updated.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-01-04T14:08:47Z",
+      "side": 1,
+      "message": "Please remove the repeated lines",
+      "range": {
+        "startLine": 19,
+        "startChar": 0,
+        "endLine": 21,
+        "endChar": 35
+      },
+      "revId": "ae10dbdf19c726452308eeb7273d6b9fd6c33f40",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "130f5f56_56f4e382",
+        "filename": "python/crossSell/crosssell_updated.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-01-04T14:08:47Z",
+      "side": 1,
+      "message": "Please add here a brief statement of what this is, what it does, etc.",
+      "revId": "ae10dbdf19c726452308eeb7273d6b9fd6c33f40",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8c49f065_d66d6f66",
+        "filename": "python/crossSell/crosssell_updated.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-01-04T14:08:47Z",
+      "side": 1,
+      "message": "Remove trailing whitespace",
+      "revId": "ae10dbdf19c726452308eeb7273d6b9fd6c33f40",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8fb5b93c_246ccc79",
+        "filename": "python/crossSell/crosssell_updated.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-01-04T14:08:47Z",
+      "side": 1,
+      "message": "remove, don\u0027t comment out",
+      "range": {
+        "startLine": 73,
+        "startChar": 5,
+        "endLine": 73,
+        "endChar": 14
+      },
+      "revId": "ae10dbdf19c726452308eeb7273d6b9fd6c33f40",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
