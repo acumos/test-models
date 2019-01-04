@@ -1,0 +1,20 @@
+syntax = "proto3";
+package DIiCqFtkPVViqddVkYJqEEOVulNxUXEw;
+
+service Model {
+  rpc classify (DataFrame) returns (Predictions);
+}
+
+message DataFrame {
+  repeated int64 relationAge = 1;
+  repeated int64 age = 2;
+  repeated int64 gender = 3;
+  repeated double annualPayment = 4;
+  repeated int64 faceamt = 5;
+  repeated int64 mortgage = 6;
+  repeated int64 life = 7;
+}
+
+message Predictions {
+  repeated int64 predictions = 1;
+}
