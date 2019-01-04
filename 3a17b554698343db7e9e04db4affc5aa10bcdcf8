@@ -1,0 +1,158 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e5c1ad1a_ffb0df9f",
+        "filename": "python/crossSell/crosssell_updated.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-01-04T11:28:47Z",
+      "side": 1,
+      "message": "Add Acumos license",
+      "revId": "3a17b554698343db7e9e04db4affc5aa10bcdcf8",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "887efb8a_2d46c683",
+        "filename": "python/crossSell/crosssell_updated.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-01-04T11:28:47Z",
+      "side": 1,
+      "message": "Remove author",
+      "range": {
+        "startLine": 5,
+        "startChar": 0,
+        "endLine": 5,
+        "endChar": 19
+      },
+      "revId": "3a17b554698343db7e9e04db4affc5aa10bcdcf8",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ebe3371_c2ff037b",
+        "filename": "python/crossSell/crosssell_updated.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-01-04T11:28:47Z",
+      "side": 1,
+      "message": "Remove author",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 19
+      },
+      "revId": "3a17b554698343db7e9e04db4affc5aa10bcdcf8",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "72b41833_5b3305e0",
+        "filename": "python/crossSell/crosssell_updated.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-01-04T11:28:47Z",
+      "side": 1,
+      "message": "Add comment -- what is this, what does it do, etc.",
+      "revId": "3a17b554698343db7e9e04db4affc5aa10bcdcf8",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e0c08bb_4a33730f",
+        "filename": "python/crossSell/crosssell_updated.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-01-04T11:28:47Z",
+      "side": 1,
+      "message": "Remove this auth -- put in something like \"TOKEN GOES HERE\"",
+      "range": {
+        "startLine": 24,
+        "startChar": 9,
+        "endLine": 24,
+        "endChar": 29
+      },
+      "revId": "3a17b554698343db7e9e04db4affc5aa10bcdcf8",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fffa35a0_5fb1f58b",
+        "filename": "python/crossSell/metadata.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-01-04T11:28:47Z",
+      "side": 1,
+      "message": "Is this an output created by the library?  If so, remove it.",
+      "revId": "3a17b554698343db7e9e04db4affc5aa10bcdcf8",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7add7d94_dc7d1e76",
+        "filename": "python/crossSell/model.proto",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-01-04T11:28:47Z",
+      "side": 1,
+      "message": "Is this an output created by the library?  If so remove it.",
+      "revId": "3a17b554698343db7e9e04db4affc5aa10bcdcf8",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "065d1e6a_3a6a32f3",
+        "filename": "python/crossSell/model.zip",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-01-04T11:28:47Z",
+      "side": 1,
+      "message": "Remove immediately please",
+      "revId": "3a17b554698343db7e9e04db4affc5aa10bcdcf8",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
