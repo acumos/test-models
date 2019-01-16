@@ -26,5 +26,6 @@ for usage and on-boarding within `Acumos <https://www.acumos.org/>`_.
 * **docs** - document only descriptions of models
 * **python** - python-based model examples
 * **tools** - shell-script and helper tools for test models
+* **web** - web app demo platforms
 * **deprecated_rework** - code stubs and samples (from any language) used to produce 
   models but not fully functional or tested in current form

@@ -1,0 +1,24 @@
+syntax = "proto3";
+package iffJAGyqvtDAStliOolzWvksBgVaTETu;
+
+service Model {
+  rpc score_one (Image) returns (Score);
+  rpc score_many (ScoreManyIn) returns (ScoreManyOut);
+}
+
+message Image {
+  string mime_type = 1;
+  bytes image_binary = 2;
+}
+
+message Score {
+  double value = 1;
+}
+
+message ScoreManyIn {
+  repeated Image images = 1;
+}
+
+message ScoreManyOut {
+  repeated Score value = 1;
+}

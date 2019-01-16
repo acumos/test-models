@@ -1,0 +1,1 @@
+../../web/pad/assets/content/content-copyright.rst
