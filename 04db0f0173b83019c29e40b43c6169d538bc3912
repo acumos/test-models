@@ -1,0 +1,278 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b5ae4e0d_6cbf1470",
+        "filename": "web/pad/assets/content/face_reunion.jpg",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-01-16T13:56:31Z",
+      "side": 1,
+      "message": "Is this 1.2MB file really needed?",
+      "revId": "04db0f0173b83019c29e40b43c6169d538bc3912",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d37306a4_9fc6b36e",
+        "filename": "web/pad/assets/content/stock-footage-bicycles.mp4",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-01-16T13:56:31Z",
+      "side": 1,
+      "message": "Is this 1.7MB file really needed?",
+      "revId": "04db0f0173b83019c29e40b43c6169d538bc3912",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1d4cd045_babe766a",
+        "filename": "web/pad/css/.DS_Store",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-01-16T13:56:31Z",
+      "side": 1,
+      "message": "Please remove this osx metadata file",
+      "revId": "04db0f0173b83019c29e40b43c6169d538bc3912",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "04634614_52877c9a",
+        "filename": "web/pad/css/vendor/fontawesome-free/svgs/.DS_Store",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-01-16T13:56:31Z",
+      "side": 1,
+      "message": "Pls remove meta data file",
+      "revId": "04db0f0173b83019c29e40b43c6169d538bc3912",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2568b77f_9c900a15",
+        "filename": "web/pad/js/pad.canvas.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-01-16T13:56:31Z",
+      "side": 1,
+      "message": "lic hdr pls",
+      "revId": "04db0f0173b83019c29e40b43c6169d538bc3912",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "04fa4f83_9ce4dd04",
+        "filename": "web/pad/js/pad.canvas.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 256,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-01-16T13:56:31Z",
+      "side": 1,
+      "message": "I love it",
+      "range": {
+        "startLine": 256,
+        "startChar": 8,
+        "endLine": 256,
+        "endChar": 46
+      },
+      "revId": "04db0f0173b83019c29e40b43c6169d538bc3912",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c4f5933e_e1b558da",
+        "filename": "web/pad/js/pad.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-01-16T13:56:31Z",
+      "side": 1,
+      "message": "I believe Bryan et al. will insist that this carry a full Acumos license header.",
+      "revId": "04db0f0173b83019c29e40b43c6169d538bc3912",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce154127_2da14a41",
+        "filename": "web/pad/js/pad.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-01-16T13:56:31Z",
+      "side": 1,
+      "message": "remove, don\u0027t comment out",
+      "range": {
+        "startLine": 14,
+        "startChar": 16,
+        "endLine": 14,
+        "endChar": 35
+      },
+      "revId": "04db0f0173b83019c29e40b43c6169d538bc3912",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bb78d618_2c9ef74a",
+        "filename": "web/pad/js/pad.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-01-16T13:56:31Z",
+      "side": 1,
+      "message": "Do not commit code with AT\u0026T internal host names",
+      "range": {
+        "startLine": 64,
+        "startChar": 41,
+        "endLine": 64,
+        "endChar": 72
+      },
+      "revId": "04db0f0173b83019c29e40b43c6169d538bc3912",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "85b7a9ed_f6c5616b",
+        "filename": "web/pad/js/pad.parser.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-01-16T13:56:31Z",
+      "side": 1,
+      "message": "pls add lic hdr",
+      "revId": "04db0f0173b83019c29e40b43c6169d538bc3912",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8fa945b1_9f90ca74",
+        "filename": "web/pad/js/pad.parser.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-01-16T13:56:31Z",
+      "side": 1,
+      "message": "remove don\u0027t comment out",
+      "range": {
+        "startLine": 98,
+        "startChar": 13,
+        "endLine": 100,
+        "endChar": 16
+      },
+      "revId": "04db0f0173b83019c29e40b43c6169d538bc3912",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4c837155_e22f2aa4",
+        "filename": "web/pad/js/pad.proto.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-01-16T13:56:31Z",
+      "side": 1,
+      "message": "lic hdr pls",
+      "revId": "04db0f0173b83019c29e40b43c6169d538bc3912",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3b31ecbc_d70fc319",
+        "filename": "web/pad/js/pad.proto.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-01-16T13:56:31Z",
+      "side": 1,
+      "message": "remove don\u0027t comment out",
+      "range": {
+        "startLine": 56,
+        "startChar": 24,
+        "endLine": 67,
+        "endChar": 26
+      },
+      "revId": "04db0f0173b83019c29e40b43c6169d538bc3912",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "19566aa0_c9f41030",
+        "filename": "web/pad/js/pad.proto.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 358,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-01-16T13:56:31Z",
+      "side": 1,
+      "message": "remove??",
+      "range": {
+        "startLine": 358,
+        "startChar": 0,
+        "endLine": 358,
+        "endChar": 56
+      },
+      "revId": "04db0f0173b83019c29e40b43c6169d538bc3912",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
