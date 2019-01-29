@@ -23,7 +23,7 @@ Pipeline Application Demo (PAD)
 .. toctree::
        :maxdepth: 2
 
-       pipeline-application-demo
+       README
        content-copyright
        release-notes
 

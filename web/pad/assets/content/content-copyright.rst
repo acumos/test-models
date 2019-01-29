@@ -22,7 +22,8 @@
 PAD Content Attribution
 =======================
 
-Some example content is included as known content within the PAD web application.  These
+Some example content is included as known content within the PAD web application 
+(see :ref:`_pad_usage`).  These
 example content files are intended to demonstrate the performance and functionality of 
 various models included with or available within the Acumos platform.
 
@@ -44,7 +45,7 @@ various models included with or available within the Acumos platform.
 
 * Image mood classification examples
     -  `example_excitement_2.jpg <https://www.pexels.com/photo/red-green-hot-air-balloon-during-daytime-51377/>`__
-    -  `example_awe_1.jpg <https://flic.kr/p/RLzkvAhttps://www.pexels.com/photo/art-beach-beautiful-clouds-269583/>`__
+    -  `example_awe_1.jpg <https://www.pexels.com/photo/art-beach-beautiful-clouds-269583/>`__
     -  `example_excitement_1.jpg <https://www.pexels.com/photo/sea-man-person-holiday-6557/>`__
     -  `example_sad_1.jpg <https://www.pexels.com/photo/burial-cemetery-countryside-cross-116909/>`__
 
@@ -52,7 +53,4 @@ various models included with or available within the Acumos platform.
     -  `brand_storefront_att.jpg <https://flic.kr/p/nuBnvf/>`__
 
 
-**Content Copyrights May Apply** - the included sample videos and images may
-carry additional copyright restrictions and are not meant for public resale or
-consumption.
 

@@ -28,6 +28,7 @@ function ProtoControl($scope, options, $timeout)
     // private data
     var proto_refs = {};
     var post_headers = { "Content-type": "text/plain;charset=UTF-8" };   //defaults for headers
+    var error_max_count = 1;    // conditionally allow more retries?
     
     /////////////////////////////////////////////////////
     // exposed functions
@@ -145,7 +146,7 @@ function ProtoControl($scope, options, $timeout)
 
         var url_attempt = $scope.config_user["Root Server"];
         var local_headers = $.extend({}, post_headers);       //rewrite with defaults
-        if ($scope.results[model_name].stats.error) return false; // had an error with this function
+        if ($scope.results[model_name].stats.error >= error_max_count) return false; // had an error with this function
 
         //console.log("[doPostImage]: Selected method ... '"+typeInput+"'");
         if (model_name in proto_refs) {     //valid protobuf type?; legacy check for direct HTTP post
@@ -201,14 +202,17 @@ function ProtoControl($scope, options, $timeout)
                     textStatus += " (Was the transform URL valid? Was the right method selected?) ";
                 }
                 var errStr = "Error: Failed javascript POST (err: "+textStatus+", "+errorThrown+")";
-                $scope.fn.alert_create(errStr, 'warning');
-                $scope.fn.ingest_results(model_name, sample_idx, null, errStr);
+                if (errorThrown != "BAD REQUEST") {
+                    $scope.fn.alert_create(errStr, 'warning');
+                    $scope.fn.ingest_results(model_name, sample_idx, null, errStr);
+                    $scope.results[model_name].stats.error++;
+                }
                 $scope.fn.canvas_lock(sample_idx, model_name, 0);    //indicate that this model is displaying sample
-                $scope.results[model_name].stats.error = true;
                 return false;
             },
             success: function(data, textStatus, jqXHR) {
                 // first, decode to JSON
+                $scope.results[model_name].stats.error = 0;
                 proto_cache(data, model_name, 'out');       //save raw output as binary chunk
                 var data_proc = data_process(data, model_name);
 

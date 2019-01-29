@@ -33,7 +33,9 @@ The PAD was created as an interactive demonstration of model interaction with th
   models in the pipeline.  The application will automatically drop new samples if a model is currently engaged
   in analysis.
 
-(Graphic)
+.. image:: pad_example.jpg
+    :alt: Sample execution of PAD with example asset
+    :width: 200
 
 
 Execution
@@ -42,7 +44,8 @@ Execution
 This application utilizes JSON data objects, so you'll need to access it from an HTTP or HTTPS webserver 
 instead of dropping it as a file into your browser (most browsers refuse to start with this method).  For that
 purpose, the simple python script `simple-cors-http-server-python3.py` has been included in the project root 
-directory. 
+directory.   A set of assets (with :ref:`_pad_copyright`) have also been included for demonstration purposes 
+with this web application.  Version changes are tracked in the :ref:`_pad_release_notes`.
 
 
 Configuration

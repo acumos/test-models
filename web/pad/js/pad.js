@@ -81,7 +81,7 @@ var app = angular
     $scope.root_sync_video = 'source_video';
     
     $scope.config_user = {};    // these options are configurable
-    $scope.config_user["Root Server"] = 'http://localhost:5000';
+    $scope.config_user["Root Server"] = 'http://localhost';
     $scope.config_user["Result Limit"] = 10;
     $scope.config_user["Frame Sample Period (ms)"] = 500;
     $scope.config_user["Length of Average Window"] = 5;
@@ -480,7 +480,7 @@ var app = angular
             'has_output':false, //has output proto ready?
             'waiting':null, //Date() instance if waiting 
             'dropped':0, //number of samples dropped
-            'error':false   // experienced an error
+            'error':0   // experienced an error
         };
         $scope.results[name].last = {};
     }

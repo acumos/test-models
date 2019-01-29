@@ -23,6 +23,15 @@
 Pipeline Application Demo (PAD) Release Notes
 =============================================
 
+0.1.1
+=====
+
+-  Fix JSON error on internal model fail (not REST request error)
+-  Fix default port/hostname to not include port
+-  Add example image
+-  Fix attribution link in documentation
+
+
 0.1.0
 =====
 
