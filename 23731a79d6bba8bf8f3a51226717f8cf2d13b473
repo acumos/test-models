@@ -1,0 +1,285 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "88fa457a_81c7fafd",
+        "filename": "python/TechM-CrossSell.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-06-03T11:46:42Z",
+      "side": 1,
+      "message": "Pls add license header",
+      "revId": "23731a79d6bba8bf8f3a51226717f8cf2d13b473",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "af95caa6_c6f0fe36",
+        "filename": "python/TechM-CrossSell.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-06-03T11:46:42Z",
+      "side": 1,
+      "message": "Pls remove author",
+      "range": {
+        "startLine": 5,
+        "startChar": 0,
+        "endLine": 5,
+        "endChar": 19
+      },
+      "revId": "23731a79d6bba8bf8f3a51226717f8cf2d13b473",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "67dd73b7_bfba900c",
+        "filename": "python/TechM-CrossSell.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-06-03T11:46:42Z",
+      "side": 1,
+      "message": "ditto",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 19
+      },
+      "revId": "23731a79d6bba8bf8f3a51226717f8cf2d13b473",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d9f0f78d_61140696",
+        "filename": "python/TechM-CrossSell.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-06-03T11:46:42Z",
+      "side": 1,
+      "message": "where is this file? if you don\u0027t commit it, this test model is utterly useless.  And it\u0027s a problem to commit binary (zip) archives, which is what xlsx is.  Can you supply the data as a CSV file?",
+      "range": {
+        "startLine": 24,
+        "startChar": 31,
+        "endLine": 24,
+        "endChar": 46
+      },
+      "revId": "23731a79d6bba8bf8f3a51226717f8cf2d13b473",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0bce6867_7f1ea1ca",
+        "filename": "python/TechM-CrossSell.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-06-03T11:46:42Z",
+      "side": 1,
+      "message": "need a readme and/or instructions to change this value",
+      "range": {
+        "startLine": 45,
+        "startChar": 25,
+        "endLine": 45,
+        "endChar": 38
+      },
+      "revId": "23731a79d6bba8bf8f3a51226717f8cf2d13b473",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6b61f624_65a7bedb",
+        "filename": "python/TechM-CrossSell.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-06-03T11:46:42Z",
+      "side": 1,
+      "message": "Don\u0027t capitalize",
+      "range": {
+        "startLine": 45,
+        "startChar": 18,
+        "endLine": 45,
+        "endChar": 19
+      },
+      "revId": "23731a79d6bba8bf8f3a51226717f8cf2d13b473",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2be8280c_68080899",
+        "filename": "python/TechM-CrossSell.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-06-03T11:46:42Z",
+      "side": 1,
+      "message": "why is this commented out/",
+      "range": {
+        "startLine": 49,
+        "startChar": 0,
+        "endLine": 50,
+        "endChar": 43
+      },
+      "revId": "23731a79d6bba8bf8f3a51226717f8cf2d13b473",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "368c2095_7b437890",
+        "filename": "python/TechM-CustomerSegmentation.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-06-03T11:46:42Z",
+      "side": 1,
+      "message": "add license header",
+      "revId": "23731a79d6bba8bf8f3a51226717f8cf2d13b473",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "789f9626_4cff25b2",
+        "filename": "python/TechM-CustomerSegmentation.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-06-03T11:46:42Z",
+      "side": 1,
+      "message": "remove",
+      "range": {
+        "startLine": 5,
+        "startChar": 0,
+        "endLine": 5,
+        "endChar": 19
+      },
+      "revId": "23731a79d6bba8bf8f3a51226717f8cf2d13b473",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bfe24c87_fecf37ae",
+        "filename": "python/TechM-CustomerSegmentation.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-06-03T11:46:42Z",
+      "side": 1,
+      "message": "where is this data file?",
+      "range": {
+        "startLine": 19,
+        "startChar": 29,
+        "endLine": 19,
+        "endChar": 42
+      },
+      "revId": "23731a79d6bba8bf8f3a51226717f8cf2d13b473",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "564a7c6c_fee6c0f7",
+        "filename": "python/TechM-CustomerSegmentation.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-06-03T11:46:42Z",
+      "side": 1,
+      "message": "why commented out?",
+      "range": {
+        "startLine": 46,
+        "startChar": 0,
+        "endLine": 47,
+        "endChar": 54
+      },
+      "revId": "23731a79d6bba8bf8f3a51226717f8cf2d13b473",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dce2242e_91a92cec",
+        "filename": "python/TechM-TopicModelling.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-06-03T11:46:42Z",
+      "side": 1,
+      "message": "add license header",
+      "revId": "23731a79d6bba8bf8f3a51226717f8cf2d13b473",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "db44ee25_29b05fcf",
+        "filename": "python/TechM-TopicModelling.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-06-03T11:46:42Z",
+      "side": 1,
+      "message": "please wrap line",
+      "range": {
+        "startLine": 35,
+        "startChar": 0,
+        "endLine": 35,
+        "endChar": 1246
+      },
+      "revId": "23731a79d6bba8bf8f3a51226717f8cf2d13b473",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
