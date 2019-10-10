@@ -1,0 +1,17 @@
+syntax = "proto3";
+package cppservice;
+
+service Model {
+  rpc classify (IrisDataFrame) returns (ClassifyOut);
+}
+
+message IrisDataFrame {
+  repeated double sepal_length = 1;
+  repeated double sepal_width = 2;
+  repeated double petal_length = 3;
+  repeated double petal_width = 4;
+}
+
+message ClassifyOut {
+  repeated int64 value = 1;
+}
