@@ -175,7 +175,7 @@ else
 
   if [[ $(dpkg -l | grep -c ' jq ') -eq 0 ]]; then
     log "Install jq"
-    sudo apt-get install -y jq zip
+    sudo apt-get --no-install-recommends install -y jq zip
   fi
 
   if [[ "$solutionId" == "" ]]; then
