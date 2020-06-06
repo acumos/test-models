@@ -22,7 +22,7 @@
 # You need to have protobuf 3 installed on your system (version 2 will not work)
 # please follow the procedure once for all 
 #
-# git clone https://github.com/google/protobuf.git protobuf
+# git clone --depth 1 https://github.com/google/protobuf.git protobuf
 # cd protobuf
 # ./autogen.sh
 # ./configure --prefix=`pwd`/../`uname -m`-linux-gnu

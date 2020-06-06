@@ -76,7 +76,7 @@ pip install acumos
 
 echo "Cloning the acumos test-models repo"
 rm -rf test-models
-git clone https://gerrit.acumos.org/r/test-models
+git clone --depth 1 https://gerrit.acumos.org/r/test-models
 
 echo "Customizing iris_sklearn.py"
 cd t*/SoupToNuts
