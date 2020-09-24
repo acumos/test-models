@@ -2,4 +2,3 @@
 #
 42f0c83244389e408b42fa668348002012ecba46                                      	GitHub Replication
 5ebde419bf21973b1419ab859b4dc83ae65645ff                                      	saml/acumos-gerrit-test-models-committers
-ldap:cn=acumos-gerrit-test-models-committers,ou=Groups,dc=freestandards,dc=org	ldap/acumos-gerrit-test-models-committers
